@@ -53,7 +53,7 @@ app.use(session({
     }
 }));
 
-const RENDER_URL = 'https://comp2537-assign2-4z5m.onrender.com/';
+const RENDER_URL = 'https://comp2537-assign2-2m41.onrender.com';
 const PING_INTERVAL = 14 * 60 * 1000;
 function keepAlive() {
     axios.get(RENDER_URL)
