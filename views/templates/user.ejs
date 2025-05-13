@@ -1,0 +1,13 @@
+<div class="card mb-3" style="max-width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Name: <%= user.name %></h5>
+        <p class="card-text">User Type: <%= user.user_type %></p>
+        <% if (user.name === userLoggedIn.name) { %>
+            <button class="btn btn-success disabled" disabled>Promote</button>
+            <button class="btn btn-warning disabled" disabled>Demote</button>
+        <% } else { %>
+            <a href="/admin/promote/<%= user._id %>" class="btn btn-success <%= user.user_type === 'admin' ? 'disabled' : '' %>">Promote</a>
+            <a href="/admin/demote/<%= user._id %>" class="btn btn-warning <%= user.user_type === 'user' ? 'disabled' : '' %>">Demote</a>
+        <% } %>
+    </div>
+</div>

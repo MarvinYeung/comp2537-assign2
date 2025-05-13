@@ -1,0 +1,6 @@
+<%- include('templates/header', { user: user, pathname: '/admin' }) %>
+<h1>Admin Panel</h1>
+<% users.forEach(user => { %>
+    <%- include('templates/user', { user: user, userLoggedIn: userLoggedIn }) %>
+<% }); %>
+<%- include('templates/footer') %>

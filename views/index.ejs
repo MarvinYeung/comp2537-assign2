@@ -1,0 +1,11 @@
+<%- include('templates/header') %>
+<% if (user) { %>
+    <h1>Hello, <%= user.name %>!</h1>
+    <a href="/members" class="btn btn-primary">Go to Members Area</a>
+    <a href="/logout" class="btn btn-secondary">Logout</a>
+<% } else { %>
+    <h1>Welcome to My Site</h1>
+    <a href="/signup" class="btn btn-primary">Sign Up</a>
+    <a href="/login" class="btn btn-primary">Log In</a>
+<% } %>
+<%- include('templates/footer') %>
